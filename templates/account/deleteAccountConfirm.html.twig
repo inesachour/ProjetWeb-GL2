@@ -1,0 +1,16 @@
+{%  extends("layout.html.twig")%}
+
+{% block title%}Are you sure?{% endblock %}
+{%  block stylesheet %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/css/styleAdd.css') }}"/>
+{% endblock %}
+{% block body %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    </nav>
+    <div class="d-flex justify-content-center mt-5">
+        <h1 class="">Are you sure you want to quit el JAW ?</h1>
+    </div>
+    <a class="btn btn-lg btn-primary halfs" href="{{ path('deleteaccount') }}">I want to proceed.</a>
+    <a class="btn btn-outline-secondary halfs" href="{{ path('account') }}">Go back to account settings</a>
+{% endblock %}

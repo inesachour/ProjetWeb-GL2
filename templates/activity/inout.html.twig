@@ -1,0 +1,17 @@
+{%  extends("layout.html.twig")%}
+
+{% block title%}Add Plans{% endblock %}
+{%  block stylesheet %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/css/styleAdd.css') }}"/>
+{% endblock %}
+{% block body %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    </nav>
+        <h1 class="cent">Pick a Type</h1>
+            <a class="btn btn-lg btn-primary halfs" href="{%  block path1 %}{{ path('evnend') }}{% endblock %}">{% block option1 %}Outdoor{%  endblock %}</a>
+            <a class="btn btn-lg btn-primary halfs"  href="{% block path2 %}{{ path('ind') }}{% endblock %}">{% block option2 %}Indoor{%  endblock %}</a>
+    <hr class="star">
+            <a class="btn btn-outline-secondary halfs" href="{{ path('home') }}">Return to home page</a>
+            <a class="btn btn-outline-secondary halfs" href="{%  block back %}{{ path('home') }}{%  endblock %}">Go Back</a>
+{% endblock %}

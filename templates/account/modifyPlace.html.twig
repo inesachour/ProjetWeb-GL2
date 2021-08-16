@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet%}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/css/styleAdd.css') }}"/>
+{% endblock %}
+{%  block body %}
+    <div class="container">
+        <div class="jumbotron">
+
+            <h2>Modifying your place {{ place.name }}</h2>
+            <br>
+            {% block form %}
+                {{ form(form) }}
+            {% endblock %}
+            <a class="btn btn-outline-secondary" href="{{ path('account.activities.places') }}">Return to your places</a>
+            <a class="btn btn-outline-secondary" href="{{ path('home') }}">Go back to home</a>
+            <br>
+
+        </div>
+    </div>
+{% endblock %}

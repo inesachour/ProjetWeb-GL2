@@ -1,0 +1,33 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/css/styleAdd.css') }}"/>
+{% endblock %}
+{%  block body %}
+    <div class="container">
+    <div class="jumbotron">
+        <h2>Adding an {{ what }}</h2>
+            <br>
+            <div  id="changecolor">
+                <span class="circle"></span>
+                <legend style="width: 200px;">My {{ what }}</legend>
+            </div>
+            <div id="menu">
+                <span class="circle" id="red"></span>
+                <span class="circle" id="blue"></span>
+                <span class="circle" id="green"></span>
+                <span class="circle" id="yellow"></span>
+            </div>
+        <div id="ws">
+        </div>
+            <br>
+            <br>
+            {% block form %}{{ form(form) }}{% endblock %}
+            <a class="btn btn-outline-secondary" href="{{ path('inout') }}">Add another plan</a>
+            <a class="btn btn-outline-secondary" href="{{ path('home') }}">Go back to home</a>
+            <br>
+        </div>
+    </div>
+
+    <script src="{{ asset('assets/js/planss.js') }}"></script>
+{% endblock %}

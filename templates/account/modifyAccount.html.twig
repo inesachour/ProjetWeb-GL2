@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet%}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/css/styleAdd.css') }}"/>
+{% endblock %}
+{%  block body %}
+    <div class="container">
+        <div class="jumbotron">
+            <!-- get name -->
+            <h2>Hi {{ row.name }} ! Feel free to modify your Account </h2>
+            <br>
+            {% block form %}
+                {{ form(form) }}
+            {% endblock %}
+            <br>
+            <a class="btn btn-outline-secondary" href="{{ path('account') }}">Return to account settings</a>
+            <a class="btn btn-outline-secondary" href="{{ path('home') }}">Go back to home</a>
+        </div>
+    </div>
+{% endblock %}
